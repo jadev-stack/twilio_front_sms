@@ -7,7 +7,8 @@ import "./MultiAudience.css";
 export default function (props) {
   const addPhones = () => {
     if (props.mphones.length > 0){
-       props.phones(props.mphones) 
+      const arr = Object.values(mphones);
+       props.phones(arr) 
        
     }
     else {
