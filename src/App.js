@@ -28,11 +28,13 @@ function App() {
 
   const send = async (numbers) => {
     try {
+      console.log("Sending message:", message, "to: ", numbers);
       const res = await sendMessage(numbers, message);
       console.log("API response :>", res.data);
+      nextStep(); 
     } catch (e) {
       console.error(e.response);
-      //   this.setState({ error: true });
+      
     }
   };
 
@@ -46,7 +48,7 @@ function App() {
       );
       break;
     case 3:
-      component = <Audience send={send} end={nextStep} goBack={goBack} />;
+      component = <Audience send={send}  goBack={goBack} />;
       break;
     case 4:
       component = <End home={home} />;

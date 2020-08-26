@@ -6,9 +6,15 @@ import "./MultiAudience.css";
 
 export default function (props) {
   const addPhones = () => {
+    
     if (props.mphones.length > 0){
-      const arr = Object.values(mphones);
+      const arr = [];
+      for (let i=0; i<props.mphones.length; i++){
+         arr.push(props.mphones[i].toString())
+      }
+    
        props.phones(arr) 
+      
        
     }
     else {

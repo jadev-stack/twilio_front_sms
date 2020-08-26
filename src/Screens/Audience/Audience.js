@@ -32,7 +32,7 @@ export default function Audience(props) {
   const sendMessage = () => {
     const numbers = Object.values(phones);
     props.send(numbers);
-    props.end();
+    
   };
 
   return (
@@ -45,7 +45,7 @@ export default function Audience(props) {
           04140000000
         </p>
        
-        <MultiAudience mphones={mphones} sMphones={setMphones} phones={setPhones}/>
+        <MultiAudience mphones={mphones} sMphones={setMphones} phones={setPhones} prueba={phones}/>
         {phones.map((item, index) => (
           <div className="audience-numbers" key={index}>
             <input
